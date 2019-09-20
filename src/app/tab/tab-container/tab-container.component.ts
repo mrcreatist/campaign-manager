@@ -19,4 +19,12 @@ export class TabContainerComponent implements OnInit {
     this.tabs = this.dataHostService.getTabs();
     this.campaignData = this.dataHostService.getCampaignData('upcoming');
   }
+
+  loadData(tab: any) {
+    this.campaignData = this.dataHostService.getCampaignData(tab.alias);
+    for(let i = 0; i < this.tabs.length; i++) {
+      this.tabs[i].isActive = false;
+    }
+    tab.isActive = true;
+  }
 }

@@ -4,6 +4,7 @@
     margin-bottom: 12px;
     border-bottom: 1px solid #efefef;
     padding: 12px;
+    cursor: pointer;
 
     .mat-form-field-infix {
         display: none;
@@ -37,10 +38,33 @@
     .flex-3 {
         flex: 3;
     }
+    .flex-5 {
+        flex: 5;
+    }
 
     p {
         margin: 0;
     }
+
+
+    .row-1 {
+        display: flex;
+    }
+
+    .row-2 {
+        display: flex;
+    }
+
+    @media screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+
+        .row-1 {
+            flex-direction: row-reverse;
+            margin: 0 0 2em 0;
+        }
+    }
+
 
     .date {
         display: flex;
@@ -126,6 +150,37 @@
                 border-radius: 2em;
                 padding: 4px;
             }
+        }
+    }
+
+
+
+
+
+
+
+
+    .dialog-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #808080db;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+
+        .dialog {
+            flex-direction: column;
+            width: 60%;
+            height: 58%;
+            background: white;
+            border-radius: 10px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
         }
     }
 }

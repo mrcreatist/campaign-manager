@@ -10,6 +10,8 @@ export class DataRowComponent implements OnInit {
 
   @Input() data: any;
 
+  dialog: boolean;
+
   constructor(
     private dataHostService: DataHostService
   ) { }
@@ -27,6 +29,10 @@ export class DataRowComponent implements OnInit {
     dataNew.date = date;
 
     this.dataHostService.updateData(this.data, dataNew);
+  }
+
+  openDialog() {
+    this.dialog = true;
   }
 
 

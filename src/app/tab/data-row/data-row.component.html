@@ -1,41 +1,54 @@
-<div class="date flex-2">
-    <p>{{data.date}}</p>
-    <p>'n' days ago</p>
-</div>
-
-<div class="campaign flex-3">
-    <img src="{{data.image}}">
-    <div class="product-name">
-        <p>{{data.name}}</p>
+<div class="row-1 flex-5">
+    <div class="date flex-2" (click)="openDialog()">
+        <p>{{data.date}}</p>
         <p>'n' days ago</p>
     </div>
-</div>
 
-<div class="view flex-1">
-    <div class="icon-holder">
-        <p class="icon">$ <mat-icon>add</mat-icon></p>
-        <p>View Pricing</p>
+    <div class="campaign flex-3" (click)="openDialog()">
+        <img src="{{data.image}}">
+        <div class="product-name">
+            <p>{{data.name}}</p>
+            <p>{{data.subdata}}</p>
+        </div>
     </div>
 </div>
 
-<div class="actions flex-2">
-    <span>
-        <mat-icon>insert_drive_file</mat-icon>
-        <p>CSV</p>
-    </span>
-    <span>
-        <mat-icon>signal_cellular_alt</mat-icon>
-        <p>Report</p>
-    </span>
-    <span>
+<div class="row-2 flex-3">
+        <div class="view flex-1" (click)="openDialog()">
+                <div class="icon-holder">
+                    <p class="icon">$ <mat-icon>add</mat-icon></p>
+                    <p>View Pricing</p>
+                </div>
+            </div>
+            
+            <div class="actions flex-2" (click)="openDialog()">
+                <span>
+                    <mat-icon>insert_drive_file</mat-icon>
+                    <p>CSV</p>
+                </span>
+                <span>
+                    <mat-icon>signal_cellular_alt</mat-icon>
+                    <p>Report</p>
+                </span>
+                <span>
+            
+                    <mat-form-field>
+                        <input matInput [matDatepicker]="picker" (dateInput)="addEvent($event)">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+            
+                    <!-- <mat-icon>calendar_today</mat-icon> -->
+                    <p>Schedule Again</p>
+                </span>
+            </div>
+</div>
 
-        <mat-form-field>
-            <input matInput [matDatepicker]="picker" (dateInput)="addEvent($event)">
-            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
-        </mat-form-field>
 
-        <!-- <mat-icon>calendar_today</mat-icon> -->
-        <p>Schedule Again</p>
-    </span>
+
+<div class="dialog-container" *ngIf="dialog" (click)="dialog=false">
+    <div class="dialog">
+            <p>{{data.name}}</p>
+            <p>{{data.subdata}}</p>
+    </div>
 </div>

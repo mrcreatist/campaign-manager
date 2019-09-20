@@ -1,6 +1,6 @@
 <div class="tab-content">
     <div *ngFor="let tab of tabs">
-        <button>{{tab.name}}</button>
+        <button [ngClass]="{'isActive' : tab.isActive}" (click)="loadData(tab)">{{tab.name}}</button>
     </div>
 </div>
 

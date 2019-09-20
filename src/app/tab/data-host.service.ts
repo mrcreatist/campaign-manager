@@ -8,14 +8,17 @@ export class DataHostService {
   private tabs = [
     {
       name: 'Upcoming Campaigns',
+      alias: 'upcoming',
       isActive: false
     },
     {
       name: 'Live Campaigns',
+      alias: 'live',
       isActive: false
     },
     {
       name: 'Past Campaigns',
+      alias: 'past',
       isActive: false
     }
   ];
@@ -43,8 +46,50 @@ export class DataHostService {
         schedule: true
       }
     ],
-    live: [],
-    past: []
+    live: [
+      {
+        id: 201,
+        date: '2017-05-01',
+        name: 'Test Whatsapp',
+        subdata: 'US',
+        image: 'https://parentzone.org.uk/sites/default/files/soon-873316_1280.png',
+        csv: false,
+        report: false,
+        schedule: true
+      },
+    ],
+    past: [
+      {
+        id: 301,
+        date: '2017-05-01',
+        name: 'Test Whatsapp',
+        subdata: 'US',
+        image: 'https://parentzone.org.uk/sites/default/files/soon-873316_1280.png',
+        csv: false,
+        report: false,
+        schedule: true
+      },
+      {
+        id: 302,
+        date: '2017-05-01',
+        name: 'Test Whatsapp',
+        subdata: 'US',
+        image: 'https://parentzone.org.uk/sites/default/files/soon-873316_1280.png',
+        csv: false,
+        report: false,
+        schedule: true
+      },
+      {
+        id: 303,
+        date: '2017-05-01',
+        name: 'Test Whatsapp',
+        subdata: 'US',
+        image: 'https://parentzone.org.uk/sites/default/files/soon-873316_1280.png',
+        csv: false,
+        report: false,
+        schedule: true
+      },
+    ]
   };
 
   constructor() { }
