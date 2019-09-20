@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "final": "git add . && git commit -m 'cli-commit' && git push && firebase deploy"
+    "final": "npm run build && git add . && git commit -m 'cli-commit' && git push && firebase deploy"
   },
   "private": true,
   "dependencies": {
