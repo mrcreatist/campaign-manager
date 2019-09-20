@@ -1,0 +1,41 @@
+.app-root {
+    .nav-bar {
+        background-color: blue;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 12px;
+
+        p {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        span {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            h3 {
+                margin: 0;
+                font-size: 16px;
+                text-transform: uppercase;
+            }
+            mat-icon {
+                cursor: pointer;
+                margin: 0 10px;
+            }
+        }
+    }
+
+    #head {
+        color: blue;
+        text-align: center;
+        margin: 2em 0;
+        font-weight: normal;
+    }
+}
+
+@import './tab/tab-container/tab-container.component';
+@import './tab/data-row/data-row.component';

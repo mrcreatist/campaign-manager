@@ -1,0 +1,131 @@
+.app-data-row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #efefef;
+    padding: 12px;
+
+    .mat-form-field-infix {
+        display: none;
+    }
+
+    .mat-form-field-underline {
+        display: none;
+    }
+
+    .mat-form-field-wrapper {
+        padding: 0;
+    }
+
+    .mat-button-wrapper {
+        height: fit-content;
+        border-radius: 2em;
+        padding: 4px;
+        transform: scale(1.5); 
+    }
+
+    .mat-datepicker-toggle-default-icon {
+        fill: black;
+    }
+
+    .flex-1 {
+        flex: 1;
+    }
+    .flex-2 {
+        flex: 2;
+    }
+    .flex-3 {
+        flex: 3;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .date {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .campaign {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        img {
+            width: 32px;
+            height: 32px;
+        }
+
+        .product-name {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .view {
+        align-items: flex-start;
+        display: flex;
+
+        .icon-holder {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .icon {
+                background: blue;
+                width: 16px;
+                height: 16px;
+                border-radius: 2em;
+                color: white;
+                font-size: 16px;
+                padding: 8px;
+                font-weight: bold;
+                position: relative;
+                line-height: 16px;
+                margin-bottom: 2px;
+    
+                mat-icon {
+                    width: fit-content;
+                    height: fit-content;
+                    font-size: 10px;
+                    position: absolute;
+                    top: 12px;
+                    left: 20px;
+                    font-weight: bold;
+                }
+            }
+    
+            p {
+                font-size: 10px;
+                text-align: center;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .actions {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        span {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            p {
+                font-size: 10px;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+            mat-icon {
+                width: fit-content;
+                height: fit-content;
+                border-radius: 2em;
+                padding: 4px;
+            }
+        }
+    }
+}

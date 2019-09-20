@@ -1,0 +1,20 @@
+<div class="tab-content">
+    <div *ngFor="let tab of tabs">
+        <button>{{tab.name}}</button>
+    </div>
+</div>
+
+<div class="tab-data">
+    <div class="header">
+        <p class="flex-2">Date</p>
+        <p class="flex-3">Campaign</p>
+        <p class="flex-1">View</p>
+        <p class="flex-2">Actions</p>
+    </div>
+
+    <app-data-row
+        *ngFor="let campaign of campaignData"
+        [data]="campaign"
+    ></app-data-row>
+
+</div>
