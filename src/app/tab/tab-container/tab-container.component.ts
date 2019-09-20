@@ -18,6 +18,7 @@ export class TabContainerComponent implements OnInit {
   ngOnInit() {
     this.tabs = this.dataHostService.getTabs();
     this.campaignData = this.dataHostService.getCampaignData('upcoming');
+    this.loadData(this.tabs[0]);
   }
 
   loadData(tab: any) {
